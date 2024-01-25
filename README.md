@@ -12,11 +12,15 @@ There are 1,000 tweets per language (4,000 in total).
 
 
 # Files 
-The aggregated tweets for each language are:
-- en_1000.csv
-- es_1000.csv
-- gr_1000.csv
-- ja_1000.csv
+In each language folder (en, es, ja, gr):
+    * A cross validation folder (cross_validation) containing all the splits for 5-fold cross-validation with:
+        {lang}_train_{i}.jsonl: 720 tweets
+        {lang}_test_{i}.jsonl: 200 tweets
+        {lang}_validation_{i}.jsonl: 80 tweets
+    * {lang}_1000.jsonl: containing all the new tweets collected (1,000 tweets)
+    * {lang}_test.jsonl: the test set to be used (800 tweets)
+    * {lang}_train.jsonl: the train set to be used (180 tweets)
+    * {lang}_validation.jsonl: the validation set to be used (20 tweets)
 
 For the aggregatation a label is assigned if at least two coders aggree on it.
 
